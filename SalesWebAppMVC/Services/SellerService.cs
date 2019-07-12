@@ -15,7 +15,7 @@ namespace SalesWebAppMVC.Services
             _context = context;
         }
 
-        public IEnumerable<Seller> FindAll()
+        public List<Seller> FindAll()
         {
             return _context.Seller.ToList();
         }
