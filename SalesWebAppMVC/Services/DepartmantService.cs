@@ -6,26 +6,18 @@ using System.Threading.Tasks;
 
 namespace SalesWebAppMVC.Services
 {
-    public class SellerService
+    public class DepartmantService
     {
         private readonly SalesWebAppMVCContext _context;
 
-        public SellerService(SalesWebAppMVCContext context)
+        public DepartmantService(SalesWebAppMVCContext context)
         {
             _context = context;
         }
 
-        public List<Seller> FindAll()
+        public List<Departmant> FindAll()
         {
-            return _context.Seller.ToList();
+            return _context.Departmant.OrderBy(dp => dp.Name).ToList();
         }
-
-        public void Insert(Seller obj)
-        {
-            _context.Add(obj);
-            _context.SaveChanges();
-        }
-
-
     }
 }
