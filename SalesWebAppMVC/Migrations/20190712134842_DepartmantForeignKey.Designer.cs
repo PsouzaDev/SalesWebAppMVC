@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalesWebAppMVC.Models;
 
 namespace SalesWebAppMVC.Migrations
 {
     [DbContext(typeof(SalesWebAppMVCContext))]
-    partial class SalesWebAppMVCContextModelSnapshot : ModelSnapshot
+    [Migration("20190712134842_DepartmantForeignKey")]
+    partial class DepartmantForeignKey
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
